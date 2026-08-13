@@ -317,6 +317,7 @@ $('#tenseList').innerHTML=T.map(t=>`
     <span class="caret">▼</span>
   </button>
   <div class="tense-body">
+    <div class="mini-h">Estrutura</div>
     <div class="formula">${esc(t.formula)}</div>
     <div class="viz" style="color:${zoneColor(t.z)}">${viz(t.marks)}<div class="cap">${t.vizCap}</div></div>
     <div class="grid2">

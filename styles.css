@@ -161,9 +161,14 @@ section{padding:52px 0;border-top:1px solid var(--line);margin-top:44px}
 .tense.open .tense-body{display:block;animation:fade .3s ease}
 @keyframes fade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .formula{
-  font-family:var(--mono);font-size:13.5px;background:var(--bg2);border:1px dashed var(--line-strong);
-  border-radius:10px;padding:11px 13px;margin:16px 0;color:var(--text);overflow-x:auto;white-space:nowrap
+  font-family:var(--mono);font-size:16px;font-weight:700;letter-spacing:-.01em;
+  background:var(--bg2);border:1px solid var(--line-strong);border-left:4px solid var(--now);
+  border-radius:10px;padding:14px 16px;margin:8px 0 16px;color:var(--text);overflow-x:auto;white-space:nowrap
 }
+.tense[data-z="past"] .formula{border-left-color:var(--past)}
+.tense[data-z="bridge"] .formula{border-left-color:var(--bridge)}
+.tense[data-z="present"] .formula{border-left-color:var(--now)}
+.tense[data-z="future"] .formula{border-left-color:var(--future)}
 .viz{margin:4px 0 18px}
 .viz svg{width:100%;height:auto;display:block}
 .viz .cap{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:2px}
@@ -171,8 +176,17 @@ section{padding:52px 0;border-top:1px solid var(--line);margin-top:44px}
 .tab{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:99px;
   border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:.16s}
 .tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
-.sent{font-size:15.5px;line-height:1.7;margin:0 0 8px;padding-left:14px;border-left:2px solid var(--line-strong)}
-.sent b{font-weight:600}
+.sent{
+  font-size:16px;font-weight:500;line-height:1.6;margin:0 0 9px;padding:10px 14px;
+  background:var(--bg2);border-left:3px solid var(--line-strong);border-radius:0 9px 9px 0;
+  transition:.16s
+}
+.sent:hover{background:var(--surface2)}
+.tense[data-z="past"] .sent{border-left-color:var(--past)}
+.tense[data-z="bridge"] .sent{border-left-color:var(--bridge)}
+.tense[data-z="present"] .sent{border-left-color:var(--now)}
+.tense[data-z="future"] .sent{border-left-color:var(--future)}
+.sent b{font-weight:700}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
 .uses li{margin-bottom:11px;list-style:none}
 .uses{padding:0;margin:0}
