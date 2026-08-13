@@ -271,7 +271,7 @@ function updateProgress(){
 
 /* ============ TIMELINE SVG ============ */
 function viz(marks){
-  const W=320,H=64,x0=12,x1=308,Y=42,span=x1-x0;
+  const W=320,H=80,x0=12,x1=308,Y=42,span=x1-x0;
   const X=t=>x0+t*span;
   let g='';
   marks.forEach(m=>{
